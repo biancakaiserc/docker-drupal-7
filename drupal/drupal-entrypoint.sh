@@ -20,6 +20,12 @@ echo "------ Dependencies Installed --------"
 echo "--------------------------------------"
 echo ""
 
+# Configure GitIgnore file in Drupal, if not exists.
+if [ ! -f /var/www/html/docroot/.gitignore ]
+then
+  cp /var/www/html/drupal/gitignore.txt /var/www/html/docroot/.gitignore
+fi
+
 # Configure Drupal Settings
 
 # Copy configuration files.
